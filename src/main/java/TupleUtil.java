@@ -3,9 +3,9 @@
  * @date 2019/11/7 16:40
  */
 public class TupleUtil {
-    long length = 0;
-    boolean isString = true;
-    TupleUtil(boolean isString,long lengt){
+    private long length = 0;
+    private boolean isString = true;
+    TupleUtil(boolean isString,long length){
         this.isString = isString;
         this.length = length;
     }

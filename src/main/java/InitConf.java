@@ -11,6 +11,7 @@ public class InitConf {
     static String path1 = null;
     static String path2 = null;
     static String path3 = null;
+    static String path4 = null;
     static {
         init();
     }
@@ -22,6 +23,7 @@ public class InitConf {
             path1 = path[0];
             path2 = path[1];
             path3 = path[2];
+            path4 = path[3];
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -49,10 +51,17 @@ public class InitConf {
         }
         return path3;
     }
+    public static String getPath4() {
+        if (path4 == null){
+            init();
+        }
+        return path4;
+    }
 
     public static void main(String[] args) {
         System.out.println(getPath1());
         System.out.println(getPath2());
         System.out.println(getPath3());
+        System.out.println(getPath4());
     }
 }
